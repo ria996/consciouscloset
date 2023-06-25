@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conscious Closet</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="pic1.png">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/new.css') }}">
+  
+</head>
+
+<body style="background: #516641;">
+
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo"></a>
+        <div class="navbar__toggle menu" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <img src = "" class="logo" id="navbar__logo"/>
+        <a><img src="https://i.ibb.co/X4b7bLv/Untitled-Artwork-1.png" alt="Untitled-Artwork-1" border="0" class="logo" id="navbar__logo"></a>
+        <a><img id="navtitle" class="logo" src="https://i.ibb.co/yBXkZPf/IMG-4450.png" alt="IMG-4450" border="0"></a>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="/" class="navbar__links">
+                    Home
+                </a>
+            </li>
+            <li class="navbar__item">
+                <a href="/newspaper.html" class="navbar__links">
+                    Finder
+                </a>
+            </li>
+            <li class="navbar__item">
+                <a href="/about.html" class="navbar__links">
+                    About
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+ <div class="login">
+    <a><img id = "title" src="https://i.ibb.co/x7VH3R6/Dark-Green-and-Peach-Simple-Dark-Lawyer-Bio-Link-Website-4.png" alt="Dark-Green-and-Peach-Simple-Dark-Lawyer-Bio-Link-Website-4" border="0"></a>
+    <h2 id="description">Use our AI model to find the most sustainable alternative</h2>
+
+    <div id="creamthing" class="rectangle"></div>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input id = "first" type="text" name="Item type" placeholder="item type" required="required" />
+        <a><img id = "firstpic" src="https://i.ibb.co/SRYW6Mg/Untitled-Artwork-5.png" alt="Untitled-Artwork-5" border="0"></a>
+        <input id = "second" type="text" name="Color" placeholder="color" required="required" />
+		<a><img id = "secondpic" src="https://i.ibb.co/0Dbv3ND/Untitled-Artwork-3.png" alt="Untitled-Artwork-3" border="0"></a>  
+        <input id = "third" type="text" name="Size" placeholder="size" required="required" />
+        <a><img id = "thirdpic" src="https://i.ibb.co/8M7HQs7/Untitled-Artwork-4.png" alt="Untitled-Artwork-4" border="0"></a>
+        <input id = "fourth" type="text" name="Material" placeholder="material" required="required" />
+        <a><img id = "fourthpic" src="https://i.ibb.co/10M06xh/Untitled-Artwork-2.png" alt="Untitled-Artwork-2" border="0"></a>
+    
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Find Clothing</button>
+    </form>
+
+   <br>
+   <br>
+   <h1 id="predictiontext">
+   {{ prediction_text }} <br>
+   <h1 id = "ptext"> {{ p_text }} <br> </h1>
+
+   <h2 id = "savetext"> {{ save_text }} <br> </h2>
+   <p id = "watertext"> {{ water_text }} <br> </p>
+   <p id = "lighttext"> {{ light_text }} <br> </p>
+   <p id = "drivingtext"> {{ driving_text }} <br> </p>
+   </p>
+   
+   </h1>
+
+ </div>
+ 
+ <div>
+    <a><img id="grass" src="https://i.ibb.co/B6WMyBn/Untitled-Artwork.png" alt="Untitled-Artwork" border="0"></a>
+ </div>
+
+ <div class="main">
+    <div class="main__container">
+        <div class="main__content">
+        <div class="main__img--container">
+            <!--<img src="images/pic2.png" alt="pic" id="main__img"/>-->
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
